@@ -5,6 +5,7 @@
  */
 package seminario2023;
 
+import CRUDs.CRUDCliente;
 import CRUDs.CRUDProducto;
 import java.math.BigDecimal;
 
@@ -59,6 +60,18 @@ public class Seminario2023 {
 //UPDATE
 //System.out.println("Update = " + CRUDs.CRUDCliente.update(1, "Homero", "Ferlandy", "Samayoa", "Sutuc", "654321", "Cambote", "98765412", 1));
   
+
+//SELECT
+
+        for (int i = 0; i <CRUDCliente.universo().size(); i++) {
+            System.out.println("Producto = " + CRUDCliente.universo().get(i).getNombre1());
+            System.out.println("Producto = " + CRUDCliente.universo().get(i).getApellido1());
+            System.out.println("Producto = " + CRUDCliente.universo().get(i).getNit());
+            
+            
+
+ }
+
     }
 
 }
