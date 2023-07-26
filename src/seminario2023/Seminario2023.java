@@ -20,8 +20,10 @@ public class Seminario2023 {
     public static void main(String[] args) {
         // TODO code application logic here
         BigDecimal precio = new BigDecimal(10);
-        //INSERT
-//        System.out.println("Insert = " + CRUDs.CRUDProducto.insert("Consome", 100, precio, 1)); 
+        
+//-------PRODUCTOS-------
+//INSERT
+//System.out.println("Insert = " + CRUDs.CRUDProducto.insert("Consome", 100, precio, 1)); 
 //System.out.println("Insert = " + CRUDs.CRUDProducto.insert("Gaseoa", 30, precio, 1)); 
 
 //UPDATE
@@ -33,19 +35,23 @@ public class Seminario2023 {
 //            System.out.println("Cantidad = " + CRUDProducto.universo().get(i).getCantidad());
 //            System.out.println("Precio = " + CRUDProducto.universo().get(i).getPrecio());
 //
-// 
+// }
     
-  //}
   
-  //Cambiar estado
+//CAMBIAR ESTADO
   
-  //System.out.println("anular" + CRUDs.CRUDProducto.anular(2, 1));
+//System.out.println("anular" + CRUDs.CRUDProducto.anular(2, 1));
   
-  //Eliminar
-  //System.out.println("Eliminar = " + CRUDs.CRUDProducto.eliminar(3, 1));
+//DELETE
+//System.out.println("Eliminar = " + CRUDs.CRUDProducto.eliminar(3, 1));
   
-  //Select especifico
-        System.out.println("Nombre = " + CRUDs.CRUDProducto.select(2).getNombreProducto());
+//SELECT ESPECÍFICO
+//System.out.println("Nombre = " + CRUDs.CRUDProducto.select(2).getNombreProducto());
+
+
+
+//-------CLIENTES-------
+
   
     }
 
