@@ -51,7 +51,13 @@ public class Seminario2023 {
 
 
 //-------CLIENTES-------
+//INSERT
+//System.out.println("Insert = " + CRUDs.CRUDCliente.insert("Diego", "Alejandro", "Samayoa", "Gomez", "12345679", "Ciudad", "12345678", 1));
+//System.out.println("Insert = " + CRUDs.CRUDCliente.insert("Daniel", "Emilio", "Samayoa", "Gomez", "987654321", "Cambote", "987654321", 1));
 
+
+//UPDATE
+//
   
     }
 
