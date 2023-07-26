@@ -3,6 +3,7 @@ package CRUDs;
 import POJOs.Cliente;
 import POJOs.Usuario;
 import java.util.Date;
+import java.util.HashSet;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -61,4 +62,47 @@ public class CRUDCliente {
         return flag;
 
     }
+
+    public static boolean update(Integer idCliente, String nombre1, String nombre2, String apellido1,
+            String apellido2, String nit, String direccion, String telefono, int idUsuario) {
+        boolean flag = false;
+        Date fecha = new Date();
+        Session session = HibernateUtil.HibernateUtil.getSessionFactory().openSession();
+        Criteria criteria = session.createCriteria(Cliente.class);
+        criteria.add(Restrictions.eq("idCliente", idCliente));
+        Cliente update = (Cliente) criteria.uniqueResult();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            if (update != null) {
+                update.setNombre1(nombre1);
+                update.setNombre2(nombre2);
+                update.setApellido1(apellido1);
+                update.setApellido2(apellido2);
+                update.setNit(nit);
+                update.setDireccion(direccion);
+                update.setTelefono(telefono);
+
+                update.setFechaModifica(fecha);
+
+                Usuario usuario = new Usuario();
+                usuario.setIdUsuario(idUsuario);
+                update.setUsuarioByUsuarioModifica(usuario);
+
+                session.update(update);
+                flag = true;
+
+            }
+            transaction.commit();
+
+        } catch (Exception e) {
+            System.out.println("Error = " + e);
+        } finally {
+            session.close();
+
+        }
+        return flag;
+
+    }
+
 }

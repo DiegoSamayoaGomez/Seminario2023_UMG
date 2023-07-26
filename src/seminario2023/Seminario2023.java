@@ -57,7 +57,7 @@ public class Seminario2023 {
 
 
 //UPDATE
-//
+//System.out.println("Update = " + CRUDs.CRUDCliente.update(1, "Homero", "Ferlandy", "Samayoa", "Sutuc", "654321", "Cambote", "98765412", 1));
   
     }
 
