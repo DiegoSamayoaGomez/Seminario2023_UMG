@@ -45,6 +45,7 @@ public class Seminario2023 {
 //INSERT
 //System.out.println("Insert = " + CRUDs.CRUDCliente.insert("Diego", "Alejandro", "Samayoa", "Gomez", "12345679", "Ciudad", "12345678", 1));
 //System.out.println("Insert = " + CRUDs.CRUDCliente.insert("Daniel", "Emilio", "Samayoa", "Gomez", "987654321", "Cambote", "987654321", 1));
+//System.out.println("Insert = " + CRUDs.CRUDCliente.insert("Daniel", "Emilio", "Samayoa", "Gomez", "987654321", "Cambote", "987654321", 1)); //USADO PARA PROBAR DELETE
 //UPDATE
 //System.out.println("Update = " + CRUDs.CRUDCliente.update(1, "Homero", "Ferlandy", "Samayoa", "Sutuc", "654321", "Cambote", "98765412", 1));
 //SELECT
@@ -59,6 +60,8 @@ public class Seminario2023 {
 //System.out.println("Apellido = "+ CRUDs.CRUDCliente.select(1).getApellido1());
 //CAMBIAR ESTADO
 //System.out.println("Anular = " + CRUDs.CRUDCliente.anular(2, 1));
+//DELETE
+//System.out.println("Eliminar = " + CRUDs.CRUDCliente.eliminar(3, 1));
     }
 
 }
