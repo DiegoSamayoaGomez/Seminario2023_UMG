@@ -128,5 +128,19 @@ public class CRUDCliente {
 
     }
     
+    //SELECT ESPECIFICO
+    public static Cliente select(Integer idCliente){
+    Session session =HibernateUtil.HibernateUtil.getSessionFactory().openSession();
+    Criteria criteria = session.createCriteria(Cliente.class);
+    criteria.add(Restrictions.eq("idCliente", idCliente));
+    Cliente select = (Cliente)criteria.uniqueResult();
+    if(select == null){
+    select = new Cliente();
+    select.setIdCliente(0);}
+    session.close();
+    return select;
+    }
+    
+    
 
 }
