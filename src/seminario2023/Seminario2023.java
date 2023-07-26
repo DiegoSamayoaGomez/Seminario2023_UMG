@@ -57,6 +57,8 @@ public class Seminario2023 {
 //SELECT ESPECÍFICO
 //System.out.println("Nombre = "+ CRUDs.CRUDCliente.select(1).getNombre1());
 //System.out.println("Apellido = "+ CRUDs.CRUDCliente.select(1).getApellido1());
+//CAMBIAR ESTADO
+//System.out.println("Anular = " + CRUDs.CRUDCliente.anular(2, 1));
     }
 
 }
