@@ -53,6 +53,7 @@ Contributor(s):
     <mapping resource="POJOs/VentaDetalle.hbm.xml"/>
     <mapping resource="POJOs/Cliente.hbm.xml"/>
     <mapping resource="POJOs/Venta.hbm.xml"/>
+    <mapping resource="POJOs/FormaPago.hbm.xml"/>
     <mapping resource="POJOs/Usuario.hbm.xml"/>
     <mapping resource="POJOs/Perfil.hbm.xml"/>
   </session-factory>

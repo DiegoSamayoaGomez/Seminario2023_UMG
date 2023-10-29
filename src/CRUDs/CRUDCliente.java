@@ -15,7 +15,7 @@ import org.hibernate.criterion.Restrictions;
 public class CRUDCliente {
 
     public static boolean insert(String nombre1, String nombre2, String apellido1,
-            String apellido2, String nit, String direccion, String telefono, int usuario) {
+        String apellido2, String nit, String direccion, String telefono, int usuario) {
         boolean flag = false;
         Date fecha = new Date();
         Session session = HibernateUtil.HibernateUtil.getSessionFactory().openSession();

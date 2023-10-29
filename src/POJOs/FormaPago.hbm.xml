@@ -3,9 +3,9 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated 28/08/2023 06:27:45 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="POJOs.Producto" table="producto" catalog="seminario_2023" optimistic-lock="version">
-        <id name="idProducto" type="java.lang.Integer">
-            <column name="ID_PRODUCTO" />
+    <class name="POJOs.FormaPago" table="forma_pago" catalog="seminario_2023" optimistic-lock="version">
+        <id name="idFormaPago" type="java.lang.Integer">
+            <column name="ID_FORMA_PAGO" />
             <generator class="identity" />
         </id>
         <many-to-one name="usuarioByUsuarioModifica" class="POJOs.Usuario" fetch="select">
@@ -17,14 +17,8 @@
         <property name="estado" type="java.lang.Boolean">
             <column name="ESTADO" />
         </property>
-        <property name="nombreProducto" type="string">
-            <column name="NOMBRE_PRODUCTO" length="50" />
-        </property>
-        <property name="cantidad" type="java.lang.Integer">
-            <column name="CANTIDAD" />
-        </property>
-        <property name="precio" type="big_decimal">
-            <column name="PRECIO" precision="10" />
+        <property name="descripcion" type="string">
+            <column name="DESCRIPCION" length="45" />
         </property>
         <property name="fechaIngreso" type="timestamp">
             <column name="FECHA_INGRESO" length="19" />
@@ -32,11 +26,11 @@
         <property name="fechaModifica" type="timestamp">
             <column name="FECHA_MODIFICA" length="19" />
         </property>
-        <set name="ventaDetalles" table="venta_detalle" inverse="true" lazy="true" fetch="select">
+        <set name="ventas" table="venta" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="ID_PRODUCTO" />
+                <column name="ID_FORMA_PAGO" />
             </key>
-            <one-to-many class="POJOs.VentaDetalle" />
+            <one-to-many class="POJOs.Venta" />
         </set>
     </class>
 </hibernate-mapping>

@@ -7,7 +7,12 @@ package seminario2023;
 
 import CRUDs.CRUDCliente;
 import CRUDs.CRUDProducto;
+import CRUDs.CRUDVentaDetalle;
 import java.math.BigDecimal;
+import java.text.ParseException;
+import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -22,9 +27,21 @@ public class Seminario2023 {
         // TODO code application logic here
         BigDecimal precio = new BigDecimal(10);
 
+//        try {
+//            for (Iterator it = CRUDVentaDetalle.selectMontoTotal(3).iterator(); it.hasNext();) {
+//                BigDecimal item = (BigDecimal) it.next();
+//                System.out.println("Monto: " + item);
+//
+//            }
+//
+//        } catch (ParseException ex) {
+//            Logger.getLogger(Seminario2023.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+    }
+
 //-------PRODUCTOS-------
 //INSERT
-//System.out.println("Insert = " + CRUDs.CRUDProducto.insert("Consome", 100, precio, 1)); 
+//System.out.println("Insert = " + CRUDs.CRUDProducto.insert("Consome", 100, precio, 1));
 //System.out.println("Insert = " + CRUDs.CRUDProducto.insert("Gaseoa", 30, precio, 1)); 
 //UPDATE
 //System.out.println("update" + CRUDs.CRUDProducto.update(2, "Tortrix", precio, 1)); 
@@ -62,6 +79,9 @@ public class Seminario2023 {
 //System.out.println("Anular = " + CRUDs.CRUDCliente.anular(2, 1));
 //DELETE
 //System.out.println("Eliminar = " + CRUDs.CRUDCliente.eliminar(3, 1));
-    }
-
+//CRUD FORMA PAGO
+//System.out.println("Venta = " + CRUDs.CRUDVenta.insert(1, 1, 1));
+//CRUD VENTA DETALLE
+//BigDecimal precio2 = new BigDecimal(100);
+//System.out.println("Venta detalle = " + CRUDs.CRUDVentaDetalle.insert(2, 7, 3, precio2));
 }
